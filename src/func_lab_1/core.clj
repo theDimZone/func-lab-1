@@ -10,7 +10,7 @@
 (defrecord Parent [name birthday sex monthly-income])
 (defrecord Family [wife husband children]
   FamilyProtocol
-  (is-with-twins [this] (boolean (some #(= (:is-twin %) true) children))))
+  (is-with-twins [_] (boolean (some #(= (:is-twin %) true) children))))
 
 (defn flatten-people
   [families]
